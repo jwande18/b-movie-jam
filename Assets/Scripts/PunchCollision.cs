@@ -5,8 +5,19 @@ using UnityEngine;
 public class PunchCollision : MonoBehaviour
 {		
 	void OnCollisionEnter(Collision collision) {
-		if(collision.gameObject.tag == "PropTag") {
-			Debug.Log("Collided with Prop!");
+		if(collision.gameObject.tag == "PropShort") {
+			DestroyObject(collision.gameObject);
+			FindObjectOfType<GameManager>().addPoints(4);
+		}
+		else if(collision.gameObject.tag == "PropSmall") {
+			DestroyObject(collision.gameObject);
+			FindObjectOfType<GameManager>().addPoints(3);
+		}
+		else if(collision.gameObject.tag == "PropMedium") {
+			DestroyObject(collision.gameObject);
+			FindObjectOfType<GameManager>().addPoints(2);
+		}
+		else if(collision.gameObject.tag == "PropLarge") {
 			DestroyObject(collision.gameObject);
 			FindObjectOfType<GameManager>().addPoints(1);
 		}
