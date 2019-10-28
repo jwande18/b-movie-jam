@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GUIManager : MonoBehaviour
 {
 	public Text pointsText;
+    
 	
     // Start is called before the first frame update
     void Start()
@@ -17,5 +18,6 @@ public class GUIManager : MonoBehaviour
     void Update()
     {
         pointsText.text = "Points: +" + FindObjectOfType<GameManager>().points;
+        
     }
 }
