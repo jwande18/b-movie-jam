@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\NavMeshAI.cs" />
     <Compile Include="Assets\Scripts\PunchCollision.cs" />
     <Compile Include="Assets\Scripts\SceneChange.cs" />
+    <Compile Include="Assets\Scripts\VisibleCursor.cs" />
     <None Include="Assets\SpaceZeta_Spotlight\Info.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">

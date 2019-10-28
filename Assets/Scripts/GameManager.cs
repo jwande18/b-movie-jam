@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         retryButton.SetActive(false);
         quitButton.SetActive(false);
         Time.timeScale = 1;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -43,6 +44,8 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0;
             gameOver.text = "You got " + points + " points!";
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             retryButton.SetActive(true);
             quitButton.SetActive(true);
         }

@@ -2,27 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.IO;
 
 public class SceneChange : MonoBehaviour
 {
     public void Restart()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadSceneAsync("Game");
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
-        Restart();
+            SceneManager.LoadSceneAsync("Game");
+            Restart();
     }
 
     public void InfoCredits()
     {
-        SceneManager.LoadScene("InfoCredits");
+        SceneManager.LoadSceneAsync("InfoCredits");
     }
 
     public void BackToTitle()
     {
-        SceneManager.LoadScene("Title");
+        Restart();
+        SceneManager.LoadSceneAsync("Title");
+
     }
 }
